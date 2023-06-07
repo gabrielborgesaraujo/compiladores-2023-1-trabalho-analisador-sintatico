@@ -54,7 +54,7 @@ factor           : unary ((MULTIPLY | DIVIDE | MODULO) unary)*;
 unary            : (NOT | MINUS) unary
                  | call;
 
-call             : primary (OPEN_PAREN arguments? OPEN_PAREN | '.' IDENTIFIER)*;
+call             : primary (OPEN_PAREN arguments? CLOSE_PAREN | '.' IDENTIFIER)*;
 
 primary          : 'true' | 'false' | 'nil' | 'this'
                  | NUMBER | STRING | IDENTIFIER | OPEN_PAREN expression CLOSE_PAREN
@@ -64,7 +64,7 @@ arguments        : expression (COMMA expression)*;
 
 function       : IDENTIFIER OPEN_PAREN parameters? CLOSE_PAREN block;
 
-parameters     : IDENTIFIER (',' IDENTIFIER)*;
+parameters     : IDENTIFIER (COMMA IDENTIFIER)*;
 
 
 // Lexer
