@@ -2,7 +2,7 @@
 
 Nome dos alunos e números de matrícula:
 * Aluno: Gabriel Borges Araújo
-* Aluno: ___________________________
+* Aluno: Victor Hugo Claudio Gomes
 * Disciplina: Compiladores
 * Semestre: 2023/1
 * Data de entrega: 31/05/2023
