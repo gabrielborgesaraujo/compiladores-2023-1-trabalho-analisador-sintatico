@@ -16,3 +16,7 @@ stream = CommonTokenStream(lexer)
 parser = SintaticoParser(stream)
 tree = parser.program()
 
+with open('arvore.txt', 'w') as treefile:
+    treefile.write(tree.toStringTree(recog=parser))
+    treefile.close()
+
