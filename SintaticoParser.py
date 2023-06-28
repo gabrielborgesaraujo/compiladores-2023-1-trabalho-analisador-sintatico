@@ -1,4 +1,4 @@
-# Generated from .\Sintatico.g4 by ANTLR 4.13.0
+# Generated from Sintatico.g4 by ANTLR 4.13.0
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -85,7 +85,7 @@ def serializedATN():
         0,0,0,202,200,1,0,0,0,203,204,7,4,0,0,204,207,3,40,20,0,205,207,
         3,42,21,0,206,203,1,0,0,0,206,205,1,0,0,0,207,41,1,0,0,0,208,218,
         3,44,22,0,209,211,5,17,0,0,210,212,3,46,23,0,211,210,1,0,0,0,211,
-        212,1,0,0,0,212,213,1,0,0,0,213,217,5,17,0,0,214,215,5,22,0,0,215,
+        212,1,0,0,0,212,213,1,0,0,0,213,217,5,18,0,0,214,215,5,22,0,0,215,
         217,5,36,0,0,216,209,1,0,0,0,216,214,1,0,0,0,217,220,1,0,0,0,218,
         216,1,0,0,0,218,219,1,0,0,0,219,43,1,0,0,0,220,218,1,0,0,0,221,236,
         5,12,0,0,222,236,5,13,0,0,223,236,5,14,0,0,224,236,5,15,0,0,225,
@@ -1721,6 +1721,12 @@ class SintaticoParser ( Parser ):
             else:
                 return self.getToken(SintaticoParser.OPEN_PAREN, i)
 
+        def CLOSE_PAREN(self, i:int=None):
+            if i is None:
+                return self.getTokens(SintaticoParser.CLOSE_PAREN)
+            else:
+                return self.getToken(SintaticoParser.CLOSE_PAREN, i)
+
         def DOT(self, i:int=None):
             if i is None:
                 return self.getTokens(SintaticoParser.DOT)
@@ -1758,6 +1764,7 @@ class SintaticoParser ( Parser ):
 
         localctx = SintaticoParser.CallContext(self, self._ctx, self.state)
         self.enterRule(localctx, 42, self.RULE_call)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 208
@@ -1775,14 +1782,14 @@ class SintaticoParser ( Parser ):
                         self.match(SintaticoParser.OPEN_PAREN)
                         self.state = 211
                         self._errHandler.sync(self)
-                        la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
-                        if la_ == 1:
+                        _la = self._input.LA(1)
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & 481044985856) != 0):
                             self.state = 210
                             self.arguments()
 
 
                         self.state = 213
-                        self.match(SintaticoParser.OPEN_PAREN)
+                        self.match(SintaticoParser.CLOSE_PAREN)
                         pass
                     elif token in [22]:
                         self.state = 214

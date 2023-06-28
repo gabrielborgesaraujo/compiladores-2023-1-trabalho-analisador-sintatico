@@ -1,4 +1,4 @@
-# Generated from .\Sintatico.g4 by ANTLR 4.13.0
+# Generated from Sintatico.g4 by ANTLR 4.13.0
 from antlr4 import *
 if "." in __name__:
     from .SintaticoParser import SintaticoParser
